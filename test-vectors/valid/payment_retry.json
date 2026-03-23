@@ -1,0 +1,7 @@
+{
+  "description": "Valid payment.retry token with incremented seq and same tctx.",
+  "token": "eyJhbGciOiJFUzI1NiIsImtpZCI6Inlpbmtvc2hpZWxkLmRldmljZS5zaWduLnYxIiwidHlwIjoiSldTIn0.eyJlaWQiOiJiM2M0ZDVlNi1mN2E4LTQ5MDEtYmNkZS1mMTIzNDU2Nzg5MDEiLCJkaWQiOiJkZXYtOWY4ZTdkNmM1YjRhM2MyZCIsImtpZCI6Inlpbmtvc2hpZWxkLmRldmljZS5zaWduLnYxIiwidHMiOjE3MDkzMTI0MTgwMDAsInNlcSI6MTA0NSwiZXZlbnQiOiJwYXltZW50LnJldHJ5IiwidGN0eCI6InRjdHgtN2M0ZTlhMmYxYjhkM2U1NiIsInNpZ19yZWYiOnsibGVkZ2VyX3NlcSI6MTA0NX19.i5hPX5-onGT4PsAWT1MJt5LEnj3ru2yuhEhZf_tsi0WUbybmlYWfJ8KnS0YXqVGohTCrCI4ERCGQVI-6FGCLQg",
+  "kid": "yinkoshield.device.sign.v1",
+  "expected": "VALID",
+  "note": "seq=1045 > seq=1044 of the original attempt"
+}

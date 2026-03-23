@@ -1,0 +1,7 @@
+{
+  "description": "Token is missing required field 'ts'.",
+  "token": "eyJhbGciOiJFUzI1NiIsImtpZCI6Inlpbmtvc2hpZWxkLmRldmljZS5zaWduLnYxIiwidHlwIjoiSldTIn0.eyJlaWQiOiJmMWUyZDNjNC1iNWE2LTQ3ODktMGFiYy1kZWYxMjM0NTY3ODkiLCJkaWQiOiJkZXYtOWY4ZTdkNmM1YjRhM2MyZCIsImtpZCI6Inlpbmtvc2hpZWxkLmRldmljZS5zaWduLnYxIiwic2VxIjoxMDQ0LCJldmVudCI6InBheW1lbnQuaW5pdGlhdGVkIiwidGN0eCI6InRjdHgtN2M0ZTlhMmYxYjhkM2U1NiIsInNpZ19yZWYiOnsibGVkZ2VyX3NlcSI6MTA0NH19.LCNZ_5gxBw5EGvYgT7_HJY64tY6Nxq88DkqlMCuPV7qtBmjLFLOkNZya0MY7QTjJoeWAigjN0hXG4p4CIL6jsg",
+  "kid": "yinkoshield.device.sign.v1",
+  "expected": "REJECT",
+  "attack": "Field omission: verifier must reject tokens missing 'ts' regardless of valid signature."
+}

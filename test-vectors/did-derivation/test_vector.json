@@ -1,0 +1,13 @@
+{
+  "_description": "Canonical test vector for did derivation. Implementations MUST produce the expected_did from the given public key.",
+  "_derivation": "SHA-256 of the EC P-256 public key in uncompressed point encoding (04 || X || Y, 65 bytes, big-endian), lowercase hex-encoded.",
+  "kid": "yinkoshield.device.sign.v1",
+  "public_key_pem_file": "../../keys/demo_public_key.pem",
+  "public_key_uncompressed_hex": "04432d180651bd6952017dd72a472974bc56509a65328f5c0cc88c53249b5a7c20cb666238280d571ec40c2eea9d4c03912cdcac550cf129a758317a107684d276",
+  "public_key_x_hex": "432d180651bd6952017dd72a472974bc56509a65328f5c0cc88c53249b5a7c20",
+  "public_key_y_hex": "cb666238280d571ec40c2eea9d4c03912cdcac550cf129a758317a107684d276",
+  "hash_algorithm": "SHA-256",
+  "hash_input": "04432d180651bd6952017dd72a472974bc56509a65328f5c0cc88c53249b5a7c20cb666238280d571ec40c2eea9d4c03912cdcac550cf129a758317a107684d276",
+  "expected_did": "b262eacf9d58d9f372fb2b4650be57f6a4b0b24f0629884315675f5cb84a46e6",
+  "_note": "Existing signed test fixtures in this repository use the legacy format 'dev-{identifier}' which predates this derivation specification."
+}

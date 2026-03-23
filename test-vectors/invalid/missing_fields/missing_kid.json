@@ -1,0 +1,7 @@
+{
+  "description": "Token is missing required field 'kid'.",
+  "token": "eyJhbGciOiJFUzI1NiIsImtpZCI6Inlpbmtvc2hpZWxkLmRldmljZS5zaWduLnYxIiwidHlwIjoiSldTIn0.eyJlaWQiOiJmMWUyZDNjNC1iNWE2LTQ3ODktMGFiYy1kZWYxMjM0NTY3ODkiLCJkaWQiOiJkZXYtOWY4ZTdkNmM1YjRhM2MyZCIsInRzIjoxNzA5MzEyNDAwMDAwLCJzZXEiOjEwNDQsImV2ZW50IjoicGF5bWVudC5pbml0aWF0ZWQiLCJ0Y3R4IjoidGN0eC03YzRlOWEyZjFiOGQzZTU2Iiwic2lnX3JlZiI6eyJsZWRnZXJfc2VxIjoxMDQ0fX0.hk-J9rHRfHnvrwXhrNHVzmfsDXuGGRfWFOcL9Pomrzpe6chRdd92vcbBfltcFJUIIqHntxtiRLtNXsYZfxid5w",
+  "kid": "yinkoshield.device.sign.v1",
+  "expected": "REJECT",
+  "attack": "Field omission: verifier must reject tokens missing 'kid' regardless of valid signature."
+}

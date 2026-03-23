@@ -1,0 +1,8 @@
+{
+  "description": "payment.retry token with seq=1040 when a prior attempt with seq=1044 has already been seen.",
+  "token": "eyJhbGciOiJFUzI1NiIsImtpZCI6Inlpbmtvc2hpZWxkLmRldmljZS5zaWduLnYxIiwidHlwIjoiSldTIn0.eyJlaWQiOiIxMWYxZDZhNS04OGY4LTQxYmEtOTQyYy1iZDcyMzRiNjEzZGQiLCJkaWQiOiJkZXYtOWY4ZTdkNmM1YjRhM2MyZCIsImtpZCI6Inlpbmtvc2hpZWxkLmRldmljZS5zaWduLnYxIiwidHMiOjE3NzQwMDQwMjMxMTIsInNlcSI6MTA0MCwiZXZlbnQiOiJwYXltZW50LnJldHJ5IiwidGN0eCI6InRjdHgtN2M0ZTlhMmYxYjhkM2U1NiIsInNpZ19yZWYiOnsibGVkZ2VyX3NlcSI6MTA0NH19.-BhLx4O82fk-uGGWy1BzM2CWvjmHzAYvTbJ8nMY5nPgSf0TE5chpBo3KzbGHdvx0nR5SLJUNUyzPcT4M3dk7Iw",
+  "kid": "yinkoshield.device.sign.v1",
+  "expected": "REJECT",
+  "prior_seq": 1044,
+  "attack": "Sequence regression: attacker attempts to insert a retry event with a lower sequence number, potentially to replay or reorder the execution record."
+}

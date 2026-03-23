@@ -1,0 +1,7 @@
+{
+  "description": "Token is missing required field 'tctx'.",
+  "token": "eyJhbGciOiJFUzI1NiIsImtpZCI6Inlpbmtvc2hpZWxkLmRldmljZS5zaWduLnYxIiwidHlwIjoiSldTIn0.eyJlaWQiOiJmMWUyZDNjNC1iNWE2LTQ3ODktMGFiYy1kZWYxMjM0NTY3ODkiLCJkaWQiOiJkZXYtOWY4ZTdkNmM1YjRhM2MyZCIsImtpZCI6Inlpbmtvc2hpZWxkLmRldmljZS5zaWduLnYxIiwidHMiOjE3MDkzMTI0MDAwMDAsInNlcSI6MTA0NCwiZXZlbnQiOiJwYXltZW50LmluaXRpYXRlZCIsInNpZ19yZWYiOnsibGVkZ2VyX3NlcSI6MTA0NH19.XNjnx2NyxayK8v4kDw4PI7_vziGhdXdTyEpGojwJUDGOaENrQqpLu2Th5Z4a-EucJkynBSZYybvUeHQ3ULavQw",
+  "kid": "yinkoshield.device.sign.v1",
+  "expected": "REJECT",
+  "attack": "Field omission: verifier must reject tokens missing 'tctx' regardless of valid signature."
+}

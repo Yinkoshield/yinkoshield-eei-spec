@@ -1,0 +1,7 @@
+{
+  "description": "Valid header and payload but empty signature segment.",
+  "token": "eyJhbGciOiJFUzI1NiIsImtpZCI6Inlpbmtvc2hpZWxkLmRldmljZS5zaWduLnYxIiwidHlwIjoiSldTIn0.eyJlaWQiOiJmMWUyZDNjNC1iNWE2LTQ3ODktMGFiYy1kZWYxMjM0NTY3ODkiLCJkaWQiOiJkZXYtOWY4ZTdkNmM1YjRhM2MyZCIsImtpZCI6Inlpbmtvc2hpZWxkLmRldmljZS5zaWduLnYxIiwidHMiOjE3MDkzMTI0MDAwMDAsInNlcSI6MTA0NCwiZXZlbnQiOiJwYXltZW50LmluaXRpYXRlZCIsInRjdHgiOiJ0Y3R4LTdjNGU5YTJmMWI4ZDNlNTYiLCJzaWdfcmVmIjp7ImxlZGdlcl9zZXEiOjEwNDR9fQ.",
+  "kid": "yinkoshield.device.sign.v1",
+  "expected": "REJECT",
+  "attack": "Attempt to bypass signature verification by providing an empty signature."
+}

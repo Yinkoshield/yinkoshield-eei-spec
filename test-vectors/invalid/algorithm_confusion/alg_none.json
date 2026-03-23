@@ -1,0 +1,7 @@
+{
+  "description": "Token header declares alg=none (unsigned).",
+  "token": "eyJhbGciOiJub25lIiwia2lkIjoieWlua29zaGllbGQuZGV2aWNlLnNpZ24udjEiLCJ0eXAiOiJKV1MifQ.eyJlaWQiOiJmMWUyZDNjNC1iNWE2LTQ3ODktMGFiYy1kZWYxMjM0NTY3ODkiLCJkaWQiOiJkZXYtOWY4ZTdkNmM1YjRhM2MyZCIsImtpZCI6Inlpbmtvc2hpZWxkLmRldmljZS5zaWduLnYxIiwidHMiOjE3MDkzMTI0MDAwMDAsInNlcSI6MTA0NCwiZXZlbnQiOiJwYXltZW50LmluaXRpYXRlZCIsInRjdHgiOiJ0Y3R4LTdjNGU5YTJmMWI4ZDNlNTYiLCJzaWdfcmVmIjp7ImxlZGdlcl9zZXEiOjEwNDR9fQ.",
+  "kid": "yinkoshield.device.sign.v1",
+  "expected": "REJECT",
+  "attack": "alg=none attack: attacker removes the signature and claims no algorithm is needed."
+}

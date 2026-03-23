@@ -1,0 +1,7 @@
+{
+  "description": "Token claims HS256 (symmetric HMAC) in the header instead of ES256.",
+  "token": "eyJhbGciOiJIUzI1NiIsImtpZCI6Inlpbmtvc2hpZWxkLmRldmljZS5zaWduLnYxIiwidHlwIjoiSldTIn0.eyJlaWQiOiJmMWUyZDNjNC1iNWE2LTQ3ODktMGFiYy1kZWYxMjM0NTY3ODkiLCJkaWQiOiJkZXYtOWY4ZTdkNmM1YjRhM2MyZCIsImtpZCI6Inlpbmtvc2hpZWxkLmRldmljZS5zaWduLnYxIiwidHMiOjE3MDkzMTI0MDAwMDAsInNlcSI6MTA0NCwiZXZlbnQiOiJwYXltZW50LmluaXRpYXRlZCIsInRjdHgiOiJ0Y3R4LTdjNGU5YTJmMWI4ZDNlNTYiLCJzaWdfcmVmIjp7ImxlZGdlcl9zZXEiOjEwNDR9fQ.AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "kid": "yinkoshield.device.sign.v1",
+  "expected": "REJECT",
+  "attack": "Algorithm confusion attack: attacker claims a weak or unsupported algorithm hoping the verifier ignores the alg check."
+}

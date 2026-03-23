@@ -1,0 +1,17 @@
+{
+  "name": "@yinkoshield/evidence-verifier",
+  "version": "1.0.0",
+  "description": "YinkoShield Evidence Token Verifier — JavaScript Reference Implementation",
+  "main": "verifier.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test tests/test_verifier.test.js",
+    "syntax-check": "node --check verifier.js"
+  },
+  "keywords": ["yinkoshield", "evidence-token", "verification", "jws"],
+  "author": "Yinkozi Group",
+  "license": "Custom",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

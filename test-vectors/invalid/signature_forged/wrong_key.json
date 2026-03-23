@@ -1,0 +1,7 @@
+{
+  "description": "Token is well-formed but signed with a different private key (attacker key, not the registered device key).",
+  "token": "eyJhbGciOiJFUzI1NiIsImtpZCI6Inlpbmtvc2hpZWxkLmRldmljZS5zaWduLnYxIiwidHlwIjoiSldTIn0.eyJlaWQiOiJmMWUyZDNjNC1iNWE2LTQ3ODktMGFiYy1kZWYxMjM0NTY3ODkiLCJkaWQiOiJkZXYtOWY4ZTdkNmM1YjRhM2MyZCIsImtpZCI6Inlpbmtvc2hpZWxkLmRldmljZS5zaWduLnYxIiwidHMiOjE3MDkzMTI0MDAwMDAsInNlcSI6MTA0NCwiZXZlbnQiOiJwYXltZW50LmluaXRpYXRlZCIsInRjdHgiOiJ0Y3R4LTdjNGU5YTJmMWI4ZDNlNTYiLCJzaWdfcmVmIjp7ImxlZGdlcl9zZXEiOjEwNDR9fQ.6gK0UXyRr02iYr-mPA0oUrEVZrnYYe7fHCrekU1VBRwV9U6y_DLOd9Ips1RsdYmwAB7l27Zd-TJ-vgnPIY2bCA",
+  "kid": "yinkoshield.device.sign.v1",
+  "expected": "REJECT",
+  "attack": "Attacker generates a valid-looking token using their own key but claims the victim device's kid."
+}

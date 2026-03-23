@@ -1,0 +1,8 @@
+{
+  "kty": "EC",
+  "crv": "P-256",
+  "kid": "yinkoshield.device.sign.v1",
+  "use": "sig",
+  "x": "Qy0YBlG9aVIBfdcqRyl0vFZQmmUyj1wMyIxTJJtafCA",
+  "y": "y2ZiOCgNVx7EDC7qnUwDkSzcrFUM8SmnWDF6EHaE0nY"
+}

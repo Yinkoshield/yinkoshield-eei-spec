@@ -1,0 +1,7 @@
+{
+  "description": "Token claims a kid that is not registered in the key store.",
+  "token": "eyJhbGciOiJFUzI1NiIsImtpZCI6ImF0dGFja2VyLnVua25vd24ua2V5LnYxIiwidHlwIjoiSldTIn0.eyJlaWQiOiJmMWUyZDNjNC1iNWE2LTQ3ODktMGFiYy1kZWYxMjM0NTY3ODkiLCJkaWQiOiJkZXYtOWY4ZTdkNmM1YjRhM2MyZCIsImtpZCI6Inlpbmtvc2hpZWxkLmRldmljZS5zaWduLnYxIiwidHMiOjE3MDkzMTI0MDAwMDAsInNlcSI6MTA0NCwiZXZlbnQiOiJwYXltZW50LmluaXRpYXRlZCIsInRjdHgiOiJ0Y3R4LTdjNGU5YTJmMWI4ZDNlNTYiLCJzaWdfcmVmIjp7ImxlZGdlcl9zZXEiOjEwNDR9fQ.6g7aC1eAtlQ90j-rft3PYSWwFJOOs6xz629hIrpK1rZr6nVCpnsRhN5dlIFOrlhmemyiqRY7E1z3d3YhkRqZ6Q",
+  "kid": "yinkoshield.device.sign.v1",
+  "expected": "REJECT",
+  "attack": "Unregistered device: attacker claims a kid that was never onboarded. Must reject after re-fetch returns nothing."
+}

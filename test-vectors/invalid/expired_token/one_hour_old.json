@@ -1,0 +1,7 @@
+{
+  "description": "Token timestamp is 1 hour in the past (well outside the 5-minute freshness window).",
+  "token": "eyJhbGciOiJFUzI1NiIsImtpZCI6Inlpbmtvc2hpZWxkLmRldmljZS5zaWduLnYxIiwidHlwIjoiSldTIn0.eyJlaWQiOiJmMWUyZDNjNC1iNWE2LTQ3ODktMGFiYy1kZWYxMjM0NTY3ODkiLCJkaWQiOiJkZXYtOWY4ZTdkNmM1YjRhM2MyZCIsImtpZCI6Inlpbmtvc2hpZWxkLmRldmljZS5zaWduLnYxIiwidHMiOjE3NzQwMDA0MjMyMTIsInNlcSI6MTA0NCwiZXZlbnQiOiJwYXltZW50LmluaXRpYXRlZCIsInRjdHgiOiJ0Y3R4LTdjNGU5YTJmMWI4ZDNlNTYiLCJzaWdfcmVmIjp7ImxlZGdlcl9zZXEiOjEwNDR9fQ.Hk0JBIpYXS7sxC0f6Uzr9pOfmjojqUj1fJUNW_J-0q3iRq15hsTlMmmHzOsMOGdEsqtwJFnWf7ggNOmOwpOjWw",
+  "kid": "yinkoshield.device.sign.v1",
+  "expected": "REJECT",
+  "attack": "Delayed relay attack: valid token captured and replayed hours later."
+}

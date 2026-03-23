@@ -1,0 +1,7 @@
+{
+  "description": "Token timestamp is 1 hour in the future.",
+  "token": "eyJhbGciOiJFUzI1NiIsImtpZCI6Inlpbmtvc2hpZWxkLmRldmljZS5zaWduLnYxIiwidHlwIjoiSldTIn0.eyJlaWQiOiJmYTg1YjcwNy0wNWY5LTQxMjgtOTcwZC1iYTdiNjJiZmViYjQiLCJkaWQiOiJkZXYtOWY4ZTdkNmM1YjRhM2MyZCIsImtpZCI6Inlpbmtvc2hpZWxkLmRldmljZS5zaWduLnYxIiwidHMiOjE3NzQwMDc2MjMyMTIsInNlcSI6MTA0NCwiZXZlbnQiOiJwYXltZW50LmluaXRpYXRlZCIsInRjdHgiOiJ0Y3R4LTdjNGU5YTJmMWI4ZDNlNTYiLCJzaWdfcmVmIjp7ImxlZGdlcl9zZXEiOjEwNDR9fQ.iPOtqlIb0i31gLFfQDzu7amDfu5r0NwwI71Kz92ydNRkBNn767xp1DA6lTTsXAcElBiJKHyA-Od4_gywvDAs0Q",
+  "kid": "yinkoshield.device.sign.v1",
+  "expected": "REJECT",
+  "attack": "Pre-signed future token: attacker signs a token now for use later, bypassing freshness."
+}

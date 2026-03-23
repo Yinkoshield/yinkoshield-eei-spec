@@ -1,0 +1,7 @@
+{
+  "description": "Token is missing required field 'did'.",
+  "token": "eyJhbGciOiJFUzI1NiIsImtpZCI6Inlpbmtvc2hpZWxkLmRldmljZS5zaWduLnYxIiwidHlwIjoiSldTIn0.eyJlaWQiOiJmMWUyZDNjNC1iNWE2LTQ3ODktMGFiYy1kZWYxMjM0NTY3ODkiLCJraWQiOiJ5aW5rb3NoaWVsZC5kZXZpY2Uuc2lnbi52MSIsInRzIjoxNzA5MzEyNDAwMDAwLCJzZXEiOjEwNDQsImV2ZW50IjoicGF5bWVudC5pbml0aWF0ZWQiLCJ0Y3R4IjoidGN0eC03YzRlOWEyZjFiOGQzZTU2Iiwic2lnX3JlZiI6eyJsZWRnZXJfc2VxIjoxMDQ0fX0.1MrEdR4tyJBfdIkEKZKLtWMrTjSM4Z2pdPX5yevIalzbmpo_ddFDDRDirjz5WJmFF-lRbFtVk0hkWLm9tWoQcQ",
+  "kid": "yinkoshield.device.sign.v1",
+  "expected": "REJECT",
+  "attack": "Field omission: verifier must reject tokens missing 'did' regardless of valid signature."
+}
