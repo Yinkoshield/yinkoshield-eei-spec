@@ -1,5 +1,7 @@
 # YinkoShield Evidence Token Specification
 
+![YinkoShield EEI Banner](banner.svg)
+
 > **Status:** Published · v1.0 · March 2026 - Maintained by Yinkozi (see [`SPEC.md`](SPEC.md))
 
 
