@@ -2,6 +2,8 @@
 
 ![YinkoShield EEI Banner](banner.svg)
 
+> Execution evidence bridges the gap between device reality and backend observation.
+
 > **Status:** Published · v1.0 · March 2026 - Maintained by Yinkozi (see [`SPEC.md`](SPEC.md))
 
 
