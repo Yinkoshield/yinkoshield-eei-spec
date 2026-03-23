@@ -15,9 +15,15 @@ This repository defines the **YinkoShield Evidence Token** format and provides r
 
 ## Overview
 
-The Execution Evidence Infrastructure (EEI) defines a standardised approach to capturing, structuring, and transporting device-level execution evidence.
+Payment systems rely on backend observation to determine what occurred during a transaction. However, the backend does not execute the interaction, it only receives the result.
 
-It is designed to provide a reliable and verifiable representation of what actually occurred on a device during a sensitive interaction, independently of detection techniques or enforcement mechanisms.
+This creates a structural gap between **what the device executed** and **what the backend observed**, particularly in scenarios involving retries, connectivity loss, user disputes, or adversarial interference.
+
+The Execution Evidence Infrastructure (EEI) defines a standard for capturing and transporting **device-signed execution evidence** alongside transaction flows.
+
+EEI introduces a verifiable, tamper-evident representation of device execution that can be independently validated by any party in the transaction chain.
+
+This specification defines the format, transport, and verification model for **YinkoShield Evidence Tokens**, enabling consistent evidence consumption across payment gateways, issuers, risk engines, and dispute systems.
 
 ---
 
@@ -74,30 +80,30 @@ The **8-step** pipeline every compliant verifier must implement (SPEC.md — ste
 
 ```mermaid
 flowchart TD
-    A([Token received]) --> B[1 · Parse JWS\nSplit header.payload.sig\nDecode Base64URL]
-    B --> C{alg and kid\npresent?}
+    A([Token received]) --> B[1 · Parse JWS<br/>Split header.payload.sig<br/>Decode Base64URL]
+    B --> C{alg and kid<br/>present?}
     C -- No --> R1([REJECT])
-    C -- Yes --> D[2 · Resolve key\nLookup kid in key store]
+    C -- Yes --> D[2 · Resolve key<br/>Lookup kid in key store]
     D --> E{Key found?}
-    E -- No, attempt re-fetch --> F{Re-fetch\nsucceeded?}
+    E -- No, attempt re-fetch --> F{Re-fetch<br/>succeeded?}
     F -- No --> R2([REJECT unknown kid])
     F -- Yes --> G
-    E -- Yes --> G[3 · Verify signature\nES256 over header.payload]
-    G --> H{Signature\nvalid?}
+    E -- Yes --> G[3 · Verify signature<br/>ES256 over header.payload]
+    G --> H{Signature<br/>valid?}
     H -- No --> R3([REJECT])
-    H -- Yes --> I[4 · Validate claims\nRequired fields · UUID · type checks]
-    I --> J{All fields\npresent and valid?}
+    H -- Yes --> I[4 · Validate claims<br/>Required fields · UUID · type checks]
+    I --> J{All fields<br/>present and valid?}
     J -- No --> R4([REJECT])
-    J -- Yes --> K[5 · Enforce freshness\nabs&#40;now − ts&#41; ≤ window]
-    K --> L{Within\nwindow?}
+    J -- Yes --> K[5 · Enforce freshness<br/>abs&#40;now − ts&#41; ≤ window]
+    K --> L{Within<br/>window?}
     L -- No --> R5([REJECT])
-    L -- Yes --> M[6 · Deduplicate\ndid + tctx + event_name + seq]
-    M --> N{Seen\nbefore?}
+    L -- Yes --> M[6 · Deduplicate<br/>did + tctx + event_name + seq]
+    M --> N{Seen<br/>before?}
     N -- Yes --> R6([REJECT duplicate])
-    N -- No --> O[7 · Retry correlation\nMonotonic seq within tctx]
-    O --> P{Sequence\nregression?}
+    N -- No --> O[7 · Retry correlation<br/>Monotonic seq within tctx]
+    O --> P{Sequence<br/>regression?}
     P -- Yes --> R7([REJECT])
-    P -- No --> Q[8 · Trust level\nfrom linked Evidence Record\nor SOFTWARE_LAYER]
+    P -- No --> Q[8 · Trust level<br/>from linked Evidence Record<br/>or SOFTWARE_LAYER]
     Q --> T([VALID · claims + trust level])
 
     style T fill:#1b5e20,color:#ffffff
@@ -177,15 +183,15 @@ sequenceDiagram
 
 ```mermaid
 stateDiagram-v2
-    [*] --> Initialised : SDK first load\nZero Trust Bootstrap Protocol\nPrivate key generated on-device\nPublic key registered with backend
+    [*] --> Initialised : SDK first load<br/>Zero Trust Bootstrap Protocol<br/>Private key generated on-device<br/>Public key registered with backend
 
-    Initialised --> Active : Normal operation\nEvidence tokens signed with kid v1
+    Initialised --> Active : Normal operation<br/>Evidence tokens signed with kid v1
 
-    Active --> Rotating : App reinstall\nExplicit rotation call\nOperator policy trigger
+    Active --> Rotating : App reinstall<br/>Explicit rotation call<br/>Operator policy trigger
 
-    Rotating --> Active : New key pair generated\nNew kid registered (v2)\nOld kid retained for 180-day dispute window
+    Rotating --> Active : New key pair generated<br/>New kid registered (v2)<br/>Old kid retained for 180-day dispute window
 
-    Active --> Expired : Dispute window elapsed\nOld kid may be removed from store
+    Active --> Expired : Dispute window elapsed<br/>Old kid may be removed from store
 
     note right of Active
         Every signed token and record
@@ -365,10 +371,10 @@ The verification model requires **no YinkoShield-operated infrastructure** at ve
 
 ```mermaid
 graph LR
-    D[Device<br/>generates key pair<br/>private key stays on device] -->|"public key registered\nat onboarding"| B[Operator Backend<br/>kid → public key store]
-    D -->|"Evidence Token\n(signed with private key)"| G[Gateway / Issuer / Scheme]
-    B -->|"public key lookup\nby kid"| G
-    G -->|"verify ES256 signature\nno YinkoShield call required"| V[✓ Verified]
+    D[Device<br/>generates key pair<br/>private key stays on device] -->|"public key registered<br/>at onboarding"| B[Operator Backend<br/>kid → public key store]
+    D -->|"Evidence Token<br/>(signed with private key)"| G[Gateway / Issuer / Scheme]
+    B -->|"public key lookup<br/>by kid"| G
+    G -->|"verify ES256 signature<br/>no YinkoShield call required"| V[✓ Verified]
 ```
 
 ---
