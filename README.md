@@ -2,7 +2,10 @@
 
 ![YinkoShield EEI Banner](banner.svg)
 
-> Execution evidence bridges the gap between device reality and backend observation.
+> Execution Evidence Infrastructure (EEI) defines a new layer for capturing and verifying what actually happened on a device during a transaction.
+> It enables systems to move from relying on application-reported data to verifiable, device-bound evidence.
+> Most systems know what was reported.  
+> EEI makes it possible to know what actually happened.
 
 > **Status:** Published · v1.0 · March 2026 - Maintained by Yinkozi (see [`SPEC.md`](SPEC.md))
 
@@ -10,6 +13,32 @@
 This repository defines the **YinkoShield Evidence Token** format and provides reference verifier implementations in four languages. It is the public specification for integrators building evidence consumption into payment gateways, issuers, risk engines, and dispute systems.
 
 **Operator pack:** [`CONFORMANCE.md`](CONFORMANCE.md) (checklists + CI) · [`THREAT_MODEL.md`](THREAT_MODEL.md) (informative threat analysis)
+
+---
+
+## The Problem
+
+Modern applications provide strong visibility into user interactions through logs, analytics, and event tracking.
+
+Historically, this has been sufficient. Backend systems could rely on application-reported data to make decisions, investigate issues, and resolve disputes.
+
+However, this model is breaking down.
+
+As decision-making increasingly relies on automation and AI, the quality and trustworthiness of input data becomes critical. Any ambiguity or inconsistency at the source is no longer contained — it is amplified.
+
+When the execution environment is influenced or compromised at runtime:
+- interactions may not originate from the user
+- inputs may be generated or altered
+- context and timing may be manipulated
+
+The application continues to report a coherent flow, but this may not reflect what actually happened on the device.
+
+This creates a growing operational risk:
+- incorrect decisions made at scale
+- inability to explain or justify outcomes
+- increased complexity in fraud, support, and dispute resolution
+
+EEI addresses this by introducing a device-level evidence layer that remains reliable even in adversarial or uncertain environments.
 
 ---
 
@@ -273,7 +302,9 @@ Content-Type: application/json
 
 ```python
 # Run from the repo root
-from verifier import EvidenceTokenVerifier, KeyStore  # when in verifiers/python/
+import sys
+sys.path.insert(0, "verifiers/python")
+from verifier import EvidenceTokenVerifier, KeyStore
 # or: sys.path.insert(0, 'verifiers/python'); from verifier import ...
 
 store = KeyStore()
@@ -432,5 +463,5 @@ Patches to reference verifiers should preserve parity with `SPEC.md` and keep al
 
 ## License
 
-Reference implementations are maintained by Yinkozi. See [`LICENSE`](LICENSE).  
+Custom License - see [`LICENSE`](LICENSE) for permitted use and restrictions.  
 
